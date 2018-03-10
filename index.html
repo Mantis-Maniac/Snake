@@ -111,8 +111,8 @@
 			var length = this.body.length-1;
 			for(var i=length;i>0;i--)
 			{
-				this.body[i][0]=this.body[i-1][0];
-				this.body[i][1]=this.body[i-1][1];
+				this.body[i][0]=this.body[i-1][0]; //heng
+				this.body[i][1]=this.body[i-1][1]; //zong
 			}
 		
 			switch(this.direct)
@@ -134,7 +134,7 @@
 			}
 			
 			
-			if(this.body[0][0]=food.x&&this.body[0][1]==food.y)
+			if(this.body[0][0]==food.x&&this.body[0][1]==food.y)
 			{
 				var x = this.body[length][0];
 				var y = this.body[length][1];
@@ -153,6 +153,8 @@
 			{
 				if(this.body[0][0]==this.body[i][0]&&this.body[0][1]==this.body[i][1])
 				{
+                    alert(this.body[i][1])
+                    //alert(this.body[i][1])
 					alert('killed by self');
 					clearTimeout(timer);
 					return;
